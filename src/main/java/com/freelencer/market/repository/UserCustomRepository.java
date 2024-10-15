@@ -10,4 +10,5 @@ public interface UserCustomRepository {
 
   UserDTO findDetailFreeLencerUser(String userId, Long profileId);
 
+  Long updateViewCount(String userId, Long profileId);
 }

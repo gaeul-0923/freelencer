@@ -47,7 +47,7 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
 
   @Override
   public UserDTO findDetailFreeLencerUser(String userId, Long profileId) {
-    UserDTO result = jpaQueryFactory
+    return jpaQueryFactory
             .select(new QUserDTO(
                     user.userId,
                     freelencerUser.profileId,
@@ -62,7 +62,12 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
                     freelencerUser.profileId.eq(profileId)
             )
             .fetchOne();
-    int viewcntUpdate = (int) jpaQueryFactory
+
+  }
+
+  @Override
+  public Long updateViewCount(String userId, Long profileId) {
+    return jpaQueryFactory
             .update(freelencerUser)
             .where(
                     freelencerUser.profileId.eq(profileId),
@@ -70,9 +75,6 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
             )
             .set(freelencerUser.viewCnt,freelencerUser.viewCnt.add(1))
             .execute();
-
-    return result;
-
   }
 
 
