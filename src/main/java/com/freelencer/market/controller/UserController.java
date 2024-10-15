@@ -38,7 +38,7 @@ public class UserController {
   }
 
   @RequestMapping("/findDetailFreeLencerUser")
-  public ResponseVO findDetailFreeLencerUser(@RequestParam String userId, @RequestParam Long profileId) {
+  public ResponseVO findDetailFreeLencerUser(@RequestParam Long userId, @RequestParam Long profileId) {
     return new ResponseVO(ResponseCode.SUCCESS, userService.findDetailFreeLencerUser(userId, profileId));
   }
 }

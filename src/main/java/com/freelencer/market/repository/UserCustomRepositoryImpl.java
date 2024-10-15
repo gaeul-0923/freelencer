@@ -46,7 +46,7 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
   }
 
   @Override
-  public UserDTO findDetailFreeLencerUser(String userId, Long profileId) {
+  public UserDTO findDetailFreeLencerUser(Long userId, Long profileId) {
     return jpaQueryFactory
             .select(new QUserDTO(
                     user.userId,
@@ -66,7 +66,7 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
   }
 
   @Override
-  public Long updateViewCount(String userId, Long profileId) {
+  public Long updateViewCount(Long userId, Long profileId) {
     return jpaQueryFactory
             .update(freelencerUser)
             .where(

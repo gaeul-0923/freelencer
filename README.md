@@ -38,3 +38,49 @@ https://www.erdcloud.com/d/6LCget4oqQtffSJHT
     - 프로필 상세 조회 후 updateViewCount api를 통해 조회수를 업데이트 합니다.
 - Enum Class 를 통해 rest api 형태로 제공합니다
 
+### 프리랜서 프로필 조회
+```
+/getFreeLencerUser?sortField=regisDate&page=0&size=10
+```
+**Response**
+```
+{
+    "result": "SUCCESS",
+    "data": [
+        {
+            "userId": 2,
+            "profileId": 2,
+            "userName": "임꺽정",
+            "regisDate": "2024-10-15T00:01:38",
+            "viewCnt": 0
+        },
+        {
+            "userId": 1,
+            "profileId": 1,
+            "userName": "홍길동",
+            "regisDate": "2024-10-10T22:54:03",
+            "viewCnt": 2
+        }
+    ],
+    "error": null
+}
+```
+
+### 프리랜서 프로필 상세조회
+```
+/findDetailFreeLencerUser?userId=1&profileId=1
+```
+**Response**
+```
+{
+    "result": "SUCCESS",
+    "data": {
+        "userId": 1,
+        "profileId": 1,
+        "userName": "홍길동",
+        "regisDate": "2024-10-10T22:54:03",
+        "viewCnt": 1
+    },
+    "error": null
+}
+```

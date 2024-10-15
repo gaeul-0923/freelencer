@@ -25,7 +25,7 @@ public class UserService {
 
   }
 
-  public UserDTO findDetailFreeLencerUser(String userId, Long profileId) {
+  public UserDTO findDetailFreeLencerUser(Long userId, Long profileId) {
     UserDTO result = userRepository.findDetailFreeLencerUser(userId, profileId);
     Long updateResult = userRepository.updateViewCount(userId, profileId);
     return result;

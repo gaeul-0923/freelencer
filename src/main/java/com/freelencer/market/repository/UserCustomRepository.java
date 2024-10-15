@@ -8,7 +8,7 @@ import java.util.List;
 public interface UserCustomRepository {
   List<UserDTO> findAllFreeLencerUser(String sortField, Pageable pageable);
 
-  UserDTO findDetailFreeLencerUser(String userId, Long profileId);
+  UserDTO findDetailFreeLencerUser(Long userId, Long profileId);
 
-  Long updateViewCount(String userId, Long profileId);
+  Long updateViewCount(Long userId, Long profileId);
 }

@@ -17,7 +17,7 @@ public class freelencerUser {
   private Long profileId;
 
   @Column(name = "user_id")
-  private String userId;
+  private Long userId;
 
   @Column(name = "view_cnt")
   private Integer viewCnt;
@@ -26,7 +26,7 @@ public class freelencerUser {
   private LocalDateTime regisDate;
 
   @Builder
-  public freelencerUser(String userId, Integer viewCnt, LocalDateTime regisDate) {
+  public freelencerUser(Long userId, Integer viewCnt, LocalDateTime regisDate) {
     this.userId = userId;
     this.viewCnt = viewCnt;
     this.regisDate = regisDate;
