@@ -46,7 +46,7 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
   }
 
   @Override
-  public UserDTO fingDetailFreeLencerUser(String userId, Long profileId) {
+  public UserDTO findDetailFreeLencerUser(String userId, Long profileId) {
     UserDTO result = jpaQueryFactory
             .select(new QUserDTO(
                     user.userId,

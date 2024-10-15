@@ -8,6 +8,6 @@ import java.util.List;
 public interface UserCustomRepository {
   List<UserDTO> findAllFreeLencerUser(String sortField, Pageable pageable);
 
-  UserDTO fingDetailFreeLencerUser(String userId, Long profileId);
+  UserDTO findDetailFreeLencerUser(String userId, Long profileId);
 
 }

@@ -29,7 +29,7 @@ public class UserService {
 
   }
 
-  public UserDTO fingDetailFreeLencerUser(String userId, Long profileId) {
-    return userRepository.fingDetailFreeLencerUser(userId, profileId);
+  public UserDTO findDetailFreeLencerUser(String userId, Long profileId) {
+    return userRepository.findDetailFreeLencerUser(userId, profileId);
   }
 }

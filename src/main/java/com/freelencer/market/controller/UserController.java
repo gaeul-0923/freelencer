@@ -33,8 +33,8 @@ public class UserController {
     return userService.findAllFreeLencerUser(sortField, page, size);
   }
 
-  @RequestMapping("/fingDetailFreeLencerUser")
-  public UserDTO fingDetailFreeLencerUser(@RequestParam String userId, @RequestParam Long profileId) {
-    return userService.fingDetailFreeLencerUser(userId, profileId);
+  @RequestMapping("/findDetailFreeLencerUser")
+  public UserDTO findDetailFreeLencerUser(@RequestParam String userId, @RequestParam Long profileId) {
+    return userService.findDetailFreeLencerUser(userId, profileId);
   }
 }
