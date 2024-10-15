@@ -32,5 +32,6 @@ https://www.erdcloud.com/d/6LCget4oqQtffSJHT
 - getFreeLencerUser api를 통해 회원의 role이 '프리랜서'이며 회원의 상태가 활성화되어있는 회원의 프로필을 조회합니다.
     - 이때 sortField로 정렬조건을 추가해줄 수 있습니다.
     - 페이징처리도 가능합니다.(기본 : 0페이지 10페이지씩 보기)
+<br />
 -findDetailFreeLencerUser api를 통해 프리랜서 회원의 상세 프로필을 조회합니다.
 
