@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-  <include resource="org/springframework/boot/logging/logback/defaults.xml" />
-  <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+  <!-- appender : 로그 출력 위치를 정의 (콘솔, 파일) -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoder : 로그 출력 형식을 정의 (날짜, 쓰레드, 로그 레벨, 로거 이름, 메세지등등) -->
     <encoder>
-      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
+
+  <!-- logger : 특정 패키지 또는 클래스에 대한 로깅 레벨을 지정 -->
+  <logger name="com.example" level="DEBUG"/>
+
+  <!-- root : 최상위 로깅 설정을 지정 -->
   <root level="debug">
-    <appender-ref ref="STDOUT" />
+    <!-- CONSOLE 이라는 appender 설정을 사용 -->
+    <appender-ref ref="CONSOLE"/>
   </root>
+
 </configuration>
